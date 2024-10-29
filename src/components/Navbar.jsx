@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import React, { useEffect, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,9 +11,22 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      gsap.to(".navbar", {
+        backgroundColor: "#ffffff",
+        scrollTrigger: {
+          trigger: ".navbar",
+          start: "top top",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }
+  }, []);
+
 
   return (
-    <div className="w-full p-6 flex justify-between lg:px-40 sm:px-4 items-center  font-bold fixed z-10 left-0 top-0 right-0 bg-black">
+    <div className="navbar w-full p-6 flex justify-between lg:px-40 sm:px-4 items-center  font-bold fixed z-10 left-0 top-0 right-0 bg-black">
       <div className="name">
         <h1 className="text-3xl text-[#08D665]">CHIRAG</h1>
       </div>
