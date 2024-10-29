@@ -14,9 +14,14 @@ const Home = () => {
         </p>
         <button className="text-white bg-[#08D665] p-3 rounded-md mt-4">Hire me</button>
       </div>
-      <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-        <img src={sky} alt="Sky illustration" className="w-30 md:w-80 lg:w-96" />
-      </div>
+      <div className="mt-8 md:mt-0 flex justify-center">
+  <img 
+    src={sky} 
+    alt="Sky illustration" 
+    className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto" 
+  />
+</div>
+
     </div>
   );
 };
