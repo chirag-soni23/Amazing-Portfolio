@@ -1,16 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html , body{
-    height: 100%;
-    width: 100%;
-}
-body{
-    background-color: #000;
+
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+  }
+  
+  .dark-theme {
+    --background-color: #000;
+    --text-color: #f1f1f1;
+  }
+  
+  /* Apply theme colors to the body */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
     font-family: sans-serif;
-}
+  }
+  
+  /* Button styling */
+  .theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .theme-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  

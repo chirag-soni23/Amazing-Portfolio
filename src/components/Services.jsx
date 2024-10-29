@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Services = () => {
+  const {darkMode} = useContext(ThemeContext);
   return (
     <div className="w-full mt-20 flex items-center flex-col gap-10">
-      <h1 className="uppercase font-bold text-2xl md:text-3xl text-white">
+      <h1 className={`uppercase font-bold text-2xl md:text-3xl  ${darkMode?"text-white":"text-gray-500"}`}>
         My <span className="text-[#08D665]">services</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-5xl cursor-pointer uppercase">
