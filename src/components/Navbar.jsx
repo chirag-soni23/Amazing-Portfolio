@@ -49,7 +49,7 @@ const Navbar = ({ homeRef, aboutRef, servicesRef, portfolioRef, blogRef, contact
       <ul
         className={`${
           isOpen ? 'block' : 'hidden'
-        } md:flex ${darkMode?"text-white":"text-gray-500"} outline-none items-center gap-6 absolute md:static top-20 left-0 w-full md:w-auto md:bg-transparent ${darkMode?"bg-white":"bg-black"} p-6 md:p-0 transition-all duration-300`}
+        } md:flex ${darkMode?"text-white":"text-gray-700"} outline-none items-center gap-6 absolute md:static top-20 left-0 w-full md:w-auto md:bg-transparent ${darkMode?"bg-black":"bg-gray-600"} p-6 md:p-0 transition-all duration-300`}
       >
         <li className="hover:text-[#08D665] cursor-pointer transition-all duration-300" onClick={() => scrollToSection(homeRef)}>Home</li>
         <li className="hover:text-[rgb(8,214,101)] cursor-pointer transition-all duration-300" onClick={() => scrollToSection(aboutRef)}>About</li>
