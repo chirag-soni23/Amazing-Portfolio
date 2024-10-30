@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
+import React, {useRef} from 'react';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -21,19 +19,9 @@ const App = () => {
   const flagsRef = useRef(null);
   const contactRef = useRef(null);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: containerRef.current,
-      smooth: true
-    });
-
-    return () => {
-      scroll.destroy();
-    };
-  }, []);
 
   return (
-    <div ref={containerRef} className='p-2' data-scroll-container>
+    <div ref={containerRef} className='p-2'>
       <Navbar 
         homeRef={homeRef}
         portfolioRef={portfolioRef}
@@ -42,13 +30,13 @@ const App = () => {
         flagsRef={flagsRef}
         contactRef={contactRef}
       />
-      <div ref={homeRef} data-scroll-section><Home /></div>
-      <div ref={portfolioRef} data-scroll-section><Portfolio /></div>
-      <div ref={servicesRef} data-scroll-section><Services /></div>
-      <div ref={blogRef} data-scroll-section><Blog /></div>
-      <div ref={flagsRef} data-scroll-section><Flags /></div>
-      <div ref={contactRef} data-scroll-section><Contact /></div>
-      <div data-scroll-section><Footer /></div>
+      <div ref={homeRef} ><Home /></div>
+      <div ref={portfolioRef} ><Portfolio /></div>
+      <div ref={servicesRef} ><Services /></div>
+      <div ref={blogRef} ><Blog /></div>
+      <div ref={flagsRef} ><Flags /></div>
+      <div ref={contactRef}><Contact /></div>
+      <div ><Footer /></div>
       <DarkLightTheme/>
     </div>
   );
