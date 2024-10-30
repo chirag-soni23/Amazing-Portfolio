@@ -47,6 +47,7 @@ const Contact = () => {
           className={`${darkMode ? 'bg-black' : 'bg-white'} w-full border ${darkMode ? 'border-white' : 'border-black'} ${darkMode ? 'text-white' : 'text-black'} p-2 outline-none focus:border-[#08D665]`}
           type="text"
           placeholder='Name'
+          required
         />
         <div className='flex w-full gap-4'>
           <input 
@@ -56,6 +57,7 @@ const Contact = () => {
             className={`${darkMode ? 'bg-black' : 'bg-white'} border ${darkMode ? 'border-white' : 'border-black'} ${darkMode ? 'text-white' : 'text-black'} w-1/2 p-2 outline-none focus:border-[#08D665]`}
             type="email"
             placeholder='Email'
+            required
           />
           <input 
             name="subject"
@@ -64,6 +66,7 @@ const Contact = () => {
             className={`${darkMode ? 'bg-black' : 'bg-white'} border ${darkMode ? 'border-white' : 'border-black'} ${darkMode ? 'text-white' : 'text-black'} w-1/2 p-2 outline-none focus:border-[#08D665]`}
             type="text"
             placeholder='Subject'
+            required
           />
         </div>
         <textarea 
@@ -72,6 +75,7 @@ const Contact = () => {
           onChange={handleChange}
           className={`${darkMode ? 'bg-black' : 'bg-white'} w-full border ${darkMode ? 'border-white' : 'border-black'} ${darkMode ? 'text-white' : 'text-black'} p-2 outline-none focus:border-[#08D665]`}
           placeholder='Your Message'
+          required
         ></textarea>
         <button 
           type="submit"
