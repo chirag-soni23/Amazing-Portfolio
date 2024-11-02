@@ -34,7 +34,7 @@ const Navbar = ({ homeRef, aboutRef, servicesRef, portfolioRef, blogRef, contact
   };
 
   return (
-    <div className={`navbar w-full p-6 flex justify-between lg:px-40 sm:px-4 items-center font-bold fixed z-10 left-0 top-0 right-0 ${darkMode?"bg-black":"bg-white"}`}>
+    <div className={`navbar w-full p-6 flex justify-between lg:px-40 sm:px-4 items-center font-bold fixed z-50 left-0 top-0 right-0 ${darkMode?"bg-black":"bg-white"}`}>
       <div className="name">
         <h1 className="text-3xl text-[#08D665]">CHIRAG</h1>
       </div>
