@@ -24,7 +24,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/send-email', formData);
+      const response = await axios.post('https://amazing-portfolio.onrender.com/send-email', formData);
       toast.success(response.data.message || 'Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
