@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/',()=>{
+  res.send("Hello");
+})
+
 app.post("/send-email",async(req,res)=>{
     const {name,email,subject,message} = req.body;
     const transporter = nodemailer.createTransport({
