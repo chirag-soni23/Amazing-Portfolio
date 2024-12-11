@@ -55,7 +55,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row w-full items-center justify-between h-full p-6 px-40 mt-20 font-bold">
+    <div className="relative flex flex-col md:flex-row w-full items-center justify-between h-full p-6 md:px-20 lg:px-40 mt-20 font-bold">
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <div className="text-white text-center md:text-left md:w-1/2 space-y-4 z-10">
@@ -69,11 +69,12 @@ const Home = () => {
         </p>
         <button className="text-white bg-[#08D665] p-3 rounded-md mt-4">Hire me</button>
       </div>
+
       <div className="mt-8 md:mt-0 flex justify-center z-10">
         <img 
           src={sky} 
           alt="Sky illustration" 
-          className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto" 
+          className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto"
         />
       </div>
     </div>
